@@ -1,0 +1,324 @@
+/*   
+Theme Name: Simon WP Framework
+Theme URI: http://simonwebdesign.com/simon-wordpress-framework-blank-theme/
+Description: A blank framework using 960.gs grid system and is licensed under the <a href="http://www.opensource.org/licenses/gpl-license.php">GPL</a>. It's a blank theme that provides the most flexibility for creating child themes from Simon WP Framework. Utilizes Theme Options to change the website width to accomadate larger resolutions, soften edges, and colorize Navigation. Theme comes with custom icons. This Framework is widget ready in the sidebar and in the footer.
+Author: Simon Urbina
+Author URI: http://simonwebdesign.com
+License: GNU General Public License v2.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Version: 1.2.8
+Tags: dark, light, white, black, gray, two-columns, right-sidebar, fixed-width, flexible-width, custom-background, custom-colors, custom-menu, editor-style, post-formats, theme-options
+*/
+
+@import url('css/reset.css');
+@import url('css/typography.css');
+/*@import url('css/forms.css');
+/* Global */
+body {
+	background: #f3f3f3;
+}
+/* Header */
+#header {
+	height: 120px;
+	background-color: white;
+}
+/* Temp */
+.reasons .swpf-img {
+	margin: 0px 10px 15px 10px;
+}
+.reasons h4 {
+	padding: 0px;
+}
+.reasons p {
+	font-size: 12px;
+	line-height:18px;
+}
+
+#options-wrapper {
+}
+.dark_navigation #navigation {
+	background: #222;
+	background: -moz-linear-gradient(#252525, #0a0a0a);
+	background: -o-linear-gradient(#252525, #0a0a0a);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#252525), to(#0a0a0a)); /* older webkit syntax */
+	background: -webkit-linear-gradient(#252525, #0a0a0a);
+	-webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 1px;
+	-moz-box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 1px;
+	box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 1px;
+	clear: both;
+	display: block;
+	float: left;
+	margin: 0px;
+	width: 100%;
+}
+.dark_navigation #navigation a {
+	color: #fff;
+}
+.dark_navigation #navigation li li a {
+	color: #434343;
+}
+.light_navigation #navigation {
+	background: #222;
+	background: -moz-linear-gradient(#e0e0e0, #c6c6c6);
+	background: -o-linear-gradient(#e0e0e0, #c6c6c6);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#e0e0e0), to(#c6c6c6)); /* older webkit syntax */
+	background: -webkit-linear-gradient(#e0e0e0, #c6c6c6);
+	-webkit-box-shadow: #ccc 0px 1px 1px;
+	-moz-box-shadow: #ccc 0px 1px 1px;
+	box-shadow: #ccc 0px 1px 1px;
+	text-shadow: #fff 0px 1px 1px;
+	clear: both;
+	display: block;
+	float: left;
+	margin: 0px;
+	width: 100%;
+}
+.light_navigation #navigation a {
+	color: #848484;
+}
+.light_navigation #navigation li li a {
+	color: #434343;
+}
+.hide_navigation #navigation {
+	display: none;
+}
+/* navigation */
+#navigation ul {
+	font-size: 13px;
+	list-style: none;
+	margin: 0px 0px 0px 10px;
+	padding-left: 0;
+}
+#navigation li {
+	float: left;
+	position: relative;
+}
+#navigation a {
+	font-weight: bolder;
+	display: block;
+	line-height: 3.333em;
+	padding: 0 1.2125em;
+	text-decoration: none;
+}
+#navigation ul ul {
+	-moz-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	-webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	display: none;
+	float: left;
+	margin: 0;
+	position: absolute;
+	top: 3.333em;
+	left: 0;
+	width: 188px;
+	z-index: 99999;
+}
+#navigation ul ul ul {
+	left: 100%;
+	top: 0;
+}
+#navigation ul ul a {
+	background: #f9f9f9;
+	border-bottom: 1px dotted #ddd;
+	color: #444;
+	font-size: 13px;
+	font-weight: normal;
+	height: auto;
+	line-height: 1.4em;
+	padding: 10px 10px;
+	width: 168px;
+}
+#navigation li:hover > a, #navigation ul ul :hover > a, #navigation a:focus {
+	background: #efefef;
+}
+#navigation li:hover > a, #navigation a:focus {
+	background: #f9f9f9; /* Show a solid color for older browsers */
+	background: -moz-linear-gradient(#f9f9f9, #e5e5e5);
+	background: -o-linear-gradient(#f9f9f9, #e5e5e5);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f9f9f9), to(#e5e5e5)); /* Older webkit syntax */
+	background: -webkit-linear-gradient(#f9f9f9, #e5e5e5);
+	color: #373737;
+}
+#navigation ul li:hover > ul {
+	display: block;
+}
+#navigation .current_page_item > a, #navigation .current_page_ancestor > a {
+	font-weight: bold;
+}
+/* Entries */
+.entry {
+}
+/* Sidebar */
+#sidebar {
+	border: 1px Solid #e0e0e0;
+	margin: 15px 0px 15px 0px;
+	padding: 12px;
+	-moz-box-shadow: inset 0 0 5px #fff;
+	-webkit-box-shadow: inset 0 0 5px #fff;
+	box-shadow: inset 0 0 5px #fff;
+}
+#pages, #archives, #categories, #feeds, #sidebarmeta, #blogroll {
+	margin: 0px 0px 0px 0px;
+}
+/* post */
+.postdate {
+	position: absolute;
+	margin-left: -71px;
+	padding: 5px;
+	background: #f9f9f9; /* Show a solid color for older browsers */
+	background: -moz-linear-gradient(#cccccc, #aaaaaa);
+	background: -o-linear-gradient(#cccccc, #aaaaaa);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#cccccc), to(#aaaaaa)); /* Older webkit syntax */
+	background: -webkit-linear-gradient(#cccccc, #aaaaaa);
+	width: 40px;
+}
+.post, .type-post, .type-page {
+	padding: 20px 20px 10px 20px;
+	margin: 15px 0px 15px 0px;
+	background: #FFF;
+	border: solid 1px #e3e3e3;
+	-moz-box-shadow: inset 0 0 10px #f3f3f3;
+	-webkit-box-shadow: inset 0 0 10px #f3f3f3;
+	box-shadow: inset 0 0 10px #f3f3f3;
+}
+.swpf-img img {
+	border: 5px solid #fff;
+	-moz-box-shadow: 0 0 5px #888;
+	-webkit-box-shadow: 0 0 5px #888;
+	box-shadow: 0 0 2px #888;
+	overflow: hidden;
+}
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.alignleft {
+	float: left;
+	margin: 0px 20px 20px 0px;
+	clear: both;
+}
+.alignright {
+	float: right;
+	margin: 0px 0px 20px 20px;
+	clear: both;
+}
+.attachment-post-thumbnail {
+	float: left;
+	min-width: inherit;
+	border: 5px solid #fff;
+	-moz-box-shadow: 0 0 5px #888;
+	-webkit-box-shadow: 0 0 5px #888;
+	box-shadow: 0 0 2px #888;
+	overflow: hidden;
+	margin: 0px 20px 20px 0px;
+}
+/*Comment Structure*/
+#comment-block {
+	background: url(images/comment-block-bg.png) no-repeat top center;
+}
+#comments {
+	margin:20px 0px 10px 0px;
+	padding:20px 0px 10px 0px;
+}
+/* Footer */
+#footer {
+	margin: 0px 0px 30px 0px;
+	padding: 30px;
+	background: #c6c6c6; /* Show a solid color for older browsers */
+	background: -moz-linear-gradient(#e0e0e0, #c6c6c6);
+	background: -o-linear-gradient(#e0e0e0, #c6c6c6);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#e0e0e0), to(#c6c6c6)); /* older webkit syntax */
+	background: -webkit-linear-gradient(#e0e0e0, #c6c6c6);
+	-webkit-box-shadow: #aaa 0px 1px 1px;
+	-moz-box-shadow: #aaa 0px 1px 1px;
+	box-shadow: #aaa 0px 1px 1px;
+	text-shadow: #fff 0px 1px 1px;
+	color: #848484;
+}
+/* Meta */
+
+.time {
+	background: url(images/calender-icon.gif) no-repeat top left;
+	margin: 0 0 0 3px;
+	padding: 0 0 2px 18px;
+}
+.post-comments {
+	background: url(images/comment-icon.gif) no-repeat top left;
+	margin: 0 0 0 3px;
+	padding: 0 0 2px 18px;
+}
+.categories {
+	background: url(images/file-icon.gif) no-repeat center left;
+	margin: 0 0 0 2px;
+	padding: 0 0 3px 20px;
+}
+.tags {
+	background: url(images/tag-icon.gif) no-repeat top left;
+	margin: 0 0 0 3px;
+	padding: 0 0 4px 18px;
+}
+/* Misc */
+.sticky {
+}
+.gallery-caption {
+}
+.bypostauthor {
+}
+.wp-caption-text {
+	border: 1px solid #ddd;
+	text-align: center;
+	background-color: #f3f3f3;
+	padding-top: 4px;
+	margin: 10px;
+	-moz-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+.wp-caption img {
+	margin: 0;
+	padding: 0;
+	border: 0 none;
+}
+.wp-caption-dd {
+	font-size: 11px;
+	line-height: 17px;
+	padding: 0 4px 5px;
+	margin: 0;
+}
+/* Pagination */
+.pagenavi {
+	margin: 0 auto 20px auto;
+	width:400px;
+	padding: 5px;
+	background: #f3f3f3;
+	border: 1px solid #ccc;
+	-moz-box-shadow: inset 0 0 5px #fff;
+	-webkit-box-shadow: inset 0 0 5px #fff;
+	box-shadow: inset 0 0 5px #fff;
+}
+.pagenavi a {
+	padding: 5px 6px 4px 6px;
+	margin: 3px;
+	text-decoration: none;
+	color: #666;
+	background-color: inherit;
+}
+.pagenavi a:hover {
+	color: #000;
+}
+.pagenavi span.pages {
+	padding: 5px 6px 4px 6px;
+	margin: 3px;
+	color: #333;
+	font-weight:bold;
+	background-color: inherit;
+}
+.pagenavi span.current {
+	padding: 5px 6px 4px 6px;
+	margin: 3px;
+	font-weight:bold;
+	color: #fff;
+	background-color: #ccc;
+}
